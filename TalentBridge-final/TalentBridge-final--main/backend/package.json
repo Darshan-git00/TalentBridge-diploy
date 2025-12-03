@@ -4,6 +4,15 @@
   "description": "TalentBridge Backend API",
   "main": "dist/server.js",
   "type": "module",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Darshan-git00/TalentBridge-diploy"
+  },
+  "keywords": ["talentbridge", "api", "nodejs", "express", "typescript"],
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "build": "tsc && prisma generate",
