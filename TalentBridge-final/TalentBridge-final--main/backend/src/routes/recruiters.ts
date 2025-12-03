@@ -1,8 +1,9 @@
-import { Router } from 'express';
+import type { Router } from 'express';
+import { Router as createRouter } from 'express';
 import { z } from 'zod';
-import { prisma } from '../lib/prisma';
+import { prisma } from '../lib/prisma.js'  ;
 
-const router = Router();
+const router = createRouter();
 
 // Search students (for recruiters)
 router.get('/:recruiterId/students/search', async (req, res) => {

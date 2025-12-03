@@ -1,9 +1,10 @@
-import { Router } from 'express';
+import type { Router } from 'express';
+import { Router as createRouter } from 'express';
 import { z } from 'zod';
-import { prisma } from '../lib/prisma';
-import { requireRecruiter } from '../middleware/authMiddleware';
+import { prisma } from '../lib/prisma.js';
+import { requireRecruiter } from '../middleware/authMiddleware.js';
 
-const router = Router();
+const router = createRouter();
 
 // Public routes (no authentication required)
 // Get upcoming drives - public endpoint

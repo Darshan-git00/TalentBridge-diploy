@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import { z } from 'zod';
-import { prisma } from '../lib/prisma';
-import { requireStudent, requireRecruiter, requireCollege } from '../middleware/authMiddleware';
+import { prisma } from '../lib/prisma.js';
+import { requireStudent, requireRecruiter, requireCollege } from '../middleware/authMiddleware.js';
 
 const router = Router();
 

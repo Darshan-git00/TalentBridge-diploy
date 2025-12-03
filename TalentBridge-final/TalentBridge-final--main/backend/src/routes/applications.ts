@@ -1,9 +1,11 @@
-import { Router } from 'express';
-import { z } from 'zod';
-import { prisma } from '../lib/prisma';
-import { requireStudent, requireRecruiter, requireCollege } from '../middleware/authMiddleware';
+import type { Router } from 'express';
+import { Router as createRouter } from 'express';
 
-const router = Router();
+import { z } from 'zod';
+import { prisma } from '../lib/prisma.js';
+import { requireStudent, requireRecruiter, requireCollege } from '../middleware/authMiddleware.js';
+
+const router = createRouter();
 
 // Get all applications with pagination and filtering - role-based access
 router.get('/', async (req, res) => {
@@ -24,7 +26,7 @@ router.get('/', async (req, res) => {
         where: { recruiterId: userId },
         select: { id: true }
       });
-      where.driveId = { in: recruiterDrives.map(drive => drive.id) };
+      where.driveId = { in: recruiterDrives.map((drive: { id: string }) => drive.id) };
     } else if (userRole === 'college') {
       // Colleges can see applications from their students
       where.collegeId = userId;
