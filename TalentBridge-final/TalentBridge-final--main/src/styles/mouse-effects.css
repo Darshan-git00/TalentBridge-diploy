@@ -1,0 +1,228 @@
+/* Mouse hover effects for Welcome page */
+
+/* Mouse follower */
+.mouse-follower {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+body:hover .mouse-follower {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Mouse trail */
+.mouse-trail {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+body:hover .mouse-trail {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Hover effects for background elements */
+.hover-effect {
+  transition: all 0.3s ease;
+}
+
+.hover-effect:hover {
+  filter: brightness(1.3);
+  transform: scale(1.08);
+  box-shadow: 0 0 50px rgba(147, 51, 234, 0.4);
+}
+
+/* Enhanced card hover effects */
+.hover-card {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-card:hover {
+  transform: perspective(1000px) rotateY(8deg) translateY(-15px) scale(1.02);
+  box-shadow: 0 40px 80px rgba(168, 85, 247, 0.5);
+}
+
+/* Icon hover effects */
+.hover-icon {
+  transition: all 0.3s ease;
+}
+
+.hover-icon:hover {
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2)) !important;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  transform: rotate(20deg) scale(1.2);
+}
+
+/* Title hover effects */
+.hover-title {
+  transition: all 0.5s ease;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.hover-title:hover {
+  text-shadow: 0 0 50px rgba(255, 255, 255, 0.8);
+  filter: brightness(1.2);
+}
+
+/* Glow effect on hover */
+.hover-glow {
+  transition: all 0.3s ease;
+}
+
+.hover-glow:hover {
+  filter: brightness(1.3);
+  transform: translateY(-2px);
+}
+
+/* Feature item hover effects */
+.hover-feature {
+  transition: all 0.3s ease;
+}
+
+.hover-feature:hover {
+  transform: translateX(15px) scale(1.05);
+  color: #fbbf24;
+  text-shadow: 0 0 20px rgba(251, 191, 36, 0.6);
+}
+
+/* Button hover effects */
+.hover-button {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.hover-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4), transparent);
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease;
+}
+
+.hover-button:hover::before {
+  width: 400px;
+  height: 400px;
+}
+
+.hover-button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 25px 50px rgba(147, 51, 234, 0.4);
+}
+
+/* Stats hover effects */
+.hover-stat {
+  transition: all 0.3s ease;
+}
+
+.hover-stat:hover {
+  transform: scale(1.15) rotateY(180deg);
+  box-shadow: 0 20px 40px rgba(168, 85, 247, 0.3);
+}
+
+/* Footer link hover effects */
+.hover-link {
+  transition: all 0.3s ease;
+}
+
+.hover-link:hover {
+  transform: translateY(-8px) scale(1.15) rotate(10deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(45deg, rgba(147, 51, 234, 0.3), rgba(236, 72, 153, 0.3)) !important;
+}
+
+/* Global hover effect for all interactive elements */
+.interactive-element {
+  transition: all 0.3s ease;
+}
+
+.interactive-element:hover {
+  filter: brightness(1.15);
+  transform: scale(1.02);
+}
+
+/* Particle effects on hover */
+.particle {
+  transition: all 0.3s ease;
+}
+
+.interactive-element:hover .particle {
+  animation: particleFloat 2s ease-in-out infinite;
+}
+
+@keyframes particleFloat {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-30px) scale(1.3);
+    opacity: 1;
+  }
+}
+
+/* Enhanced glow effect on hover */
+.glow-effect {
+  transition: all 0.3s ease;
+}
+
+.glow-effect:hover {
+  box-shadow: 0 0 50px rgba(147, 51, 234, 0.7);
+  filter: brightness(1.2);
+}
+
+/* Floating particle orbs */
+.particle-orb {
+  pointer-events: none;
+}
+
+/* Interactive ripple effect */
+.ripple-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple-effect::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: all 0.6s ease;
+}
+
+.ripple-effect:hover::after {
+  width: 300px;
+  height: 300px;
+  opacity: 0;
+}
+
+/* Magnetic hover effect */
+.magnetic-hover {
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.magnetic-hover:hover {
+  transform: scale(1.1) rotate(2deg);
+  filter: brightness(1.2);
+}
+
+/* Neon glow effect */
+.neon-glow {
+  transition: all 0.3s ease;
+}
+
+.neon-glow:hover {
+  filter: drop-shadow(0 0 20px rgba(147, 51, 234, 0.8))
+          drop-shadow(0 0 40px rgba(236, 72, 153, 0.6));
+  transform: translateY(-2px);
+}
